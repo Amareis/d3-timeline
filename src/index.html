@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timeline Visualization</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="chart"></div>
+
+<div id="control-panel">
+    <h3>Settings</h3>
+
+    <label for="CircleMaxSize">Circle Max Size: </label>
+    <input type="number" id="CircleMaxSize" step="10">
+
+    <label for="ChartHeight">Chart Height (px): </label>
+    <input type="number" id="ChartHeight" step="100">
+
+    <label for="Padding">Padding: </label>
+    <input type="number" id="Padding" step="2">
+
+    <label for="forceYMinStrength">forceY: minStrength: </label>
+    <input type="number" id="forceYMinStrength" step="2">
+
+    <label for="forceYMaxStrength">forceY: maxStrength: </label>
+    <input type="number" id="forceYMaxStrength" step="10">
+
+    <label for="forceYRange">forceY: range: </label>
+    <input type="number" id="forceYRange" step="0.05">
+
+    <label for="forceX">forceX: </label>
+    <input type="number" id="forceX" step="0.05">
+
+    <label for="forceCollideMultiplier">forceCollide multiplier: </label>
+    <input type="number" id="forceCollideMultiplier" step="0.05">
+
+    <label for="forceManyBody">forceManyBody: </label>
+    <input type="number" id="forceManyBody" step="50">
+
+    <label for="borderForce">borderForce: </label>
+    <input type="number" id="borderForce" step="0.005">
+
+    <label for="forceXClamp">forceXClamp: </label>
+    <input type="number" id="forceXClamp" step="1">
+
+    <label for="constrainPosition">constrainPosition: </label>
+    <input type="number" id="constrainPosition" step="100">
+
+    <label for="simulationForceXStrength">simulation: forceX strength: </label>
+    <input type="number" id="simulationForceXStrength" step="0.05">
+
+    <label for="simulationForceYStrength">simulation: forceY strength: </label>
+    <input type="number" id="simulationForceYStrength" step="0.05">
+
+    <label for="simulationAlphaDecay">simulation: alphaDecay: </label>
+    <input type="number" id="simulationAlphaDecay" step="0.001">
+
+    <label for="tickedForceXClamp">ticked: forceXClamp: </label>
+    <input type="number" id="tickedForceXClamp" step="0.05">
+
+    <label for="tickedBorderForce">ticked: borderForce: </label>
+    <input type="number" id="tickedBorderForce" step="0.05">
+
+    <br></br>
+
+    <button id="save-svg">Save SVG</button>
+</div>
+
+<script src="https://d3js.org/d3.v6.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
