@@ -11,6 +11,9 @@
 <div id="chart"></div>
 
 <div id="control-panel">
+    <label>Import data from CSV</label>
+    <input type="file" accept=".csv" onchange="importCsv(this.files[0]); this.value = null"  />
+
     <h3>Settings</h3>
 
     <label for="CircleMaxSize">Circle Max Size: </label>
