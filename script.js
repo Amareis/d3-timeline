@@ -223,6 +223,7 @@ function createChart(data) {
     .data(data)
     .enter()
     .append("g")
+    .attr("id", d => `${d.name}, ${d.amounttext}`)
 
   const circles = groups
     .append("circle")
