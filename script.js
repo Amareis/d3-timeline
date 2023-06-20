@@ -17,16 +17,17 @@ exampleData.forEach(d => {
   d.date = parseDate(d.date);
 });
 
+let currentData = exampleData
 
 function importCsv(file) {
   const reader = new FileReader();
   reader.readAsText(file, "UTF-8");
   reader.onload = function (evt) {
     const data = csvJSON(evt.target.result)
-    console.log(data)
     data.forEach(d => {
       d.amount = d.amount.replace(/\D/g, '');
     });
+    currentData = data
 
     createChart(data)
   }
@@ -368,10 +369,10 @@ function updateParameters() {
   tickedForceXClampSettings = parseFloat(document.getElementById("tickedForceXClamp").value);
   tickedBorderForceSettings = parseFloat(document.getElementById("tickedBorderForce").value);
 
-  createChart(exampleData);
+  createChart(currentData);
 }
 
-createChart(exampleData);
+createChart(currentData);
 
 
 
