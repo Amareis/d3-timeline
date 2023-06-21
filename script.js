@@ -215,8 +215,8 @@ function createChart(data) {
     .call(xAxis);
 
   const colorScale = d3.scaleOrdinal()
-    .domain(["hack", "scam", "defi-hack"])
-    .range(["#00FFF0", "#29313D", "#7E8BFF"]);
+    .domain(["hack", "scam", "defi-hack", "white-hack"])
+    .range(["#00FFF0", "#29313D", "#7E8BFF", "#FFFFFF"]);
 
   const formatDate = d3.timeFormat("%b %d, %Y");
 
@@ -290,7 +290,7 @@ function createChart(data) {
 
 
 
-  const lines = svg.selectAll("line")
+  const lines = svg.selectAll(false)
     .data(data)
     .enter()
     .append("line")
